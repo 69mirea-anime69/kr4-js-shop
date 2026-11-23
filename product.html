@@ -27,7 +27,17 @@
     </div>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html">techshop</a><a href="catalog.html">Каталог</a
+        <a class="brand" href="index.html">techshop</a><button
+          class="menu-toggle secondary"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          hidden
+        >
+          Меню
+        </button>
+        <nav id="site-menu" aria-label="Основная навигация">
+          <a href="index.html">Главная</a><a href="catalog.html">Каталог</a
           ><a href="contacts.html">Доставка и вопросы</a>
         </nav>
         <a class="cart-link" href="cart.html"
