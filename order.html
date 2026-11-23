@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Сборка — техника для учёбы, работы и отдыха. Оформление заявки."
+    />
+    <title>Оформление заявки — Сборка</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <div class="topbar">
+      <div class="container">
+        <span>Техника, с которой всё складывается.</span
+        ><span>−10% на первый набор · START10</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">с.</span>сборка<span class="brand-dot"
+            >/</span
+          ></a
+        ><button
+          class="menu-toggle secondary"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          hidden
+        >
+          Меню
+        </button>
+        <nav id="site-menu" aria-label="Основная навигация">
+          <a href="index.html">Главная</a><a href="catalog.html">Каталог</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </nav>
+        <a class="cart-link" href="cart.html"
+          >Корзина <span class="cart-count">0</span></a
+        >
+      </div>
+    </header>
+    <main class="container" id="main-content" tabindex="-1">
+      <p class="breadcrumbs">
+        <a href="index.html">Главная</a><span>/</span>Оформление заявки
+      </p>
+      <noscript
+        ><p class="notice">
+          Для каталога и корзины включите JavaScript в браузере.
+        </p></noscript
+      >
+      <div class="page-heading">
+        <p class="eyebrow">ПОЧТИ ГОТОВО</p>
+        <h1>Оформление заявки</h1>
+        <p>Оставьте контакты и выберите, как получить свой заказ.</p>
+      </div>
+      <div class="checkout-layout">
+        <form id="order-form" class="form-panel" novalidate>
+          <h2>Контактные данные</h2>
+          <div class="form-grid">
+            <div>
+              <label for="name">Имя *</label
+              ><input
+                id="name"
+                name="name"
+                autocomplete="given-name"
+                placeholder="Как к вам обращаться?"
+                required
+                aria-describedby="name-error"
+              />
+              <p class="error" id="name-error"></p>
+            </div>
+            <div>
+              <label for="email">E-mail *</label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="name@example.com"
+                required
+                aria-describedby="email-error"
+              />
+              <p class="error" id="email-error"></p>
+            </div>
+            <div>
+              <label for="phone">Телефон *</label
+              ><input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="+7 900 123-45-67"
+                required
+                aria-describedby="phone-error"
+              />
+              <p class="error" id="phone-error"></p>
+            </div>
+            <div>
+              <label for="delivery">Способ получения</label
+              ><select id="delivery" name="delivery">
+                <option value="pickup">Самовывоз — бесплатно</option>
+                <option value="courier">Доставка — от 0 до 490 ₽</option>
+              </select>
+            </div>
+            <div class="full" id="address-field" hidden>
+              <label for="address">Адрес доставки *</label
+              ><input
+                id="address"
+                name="address"
+                autocomplete="street-address"
+                placeholder="Город, улица, дом, квартира"
+                aria-describedby="address-error"
+              />
+              <p class="error" id="address-error"></p>
+            </div>
+            <div class="full">
+              <label for="comment">Комментарий</label
+              ><textarea
+                id="comment"
+                name="comment"
+                rows="3"
+                maxlength="1000"
+                placeholder="Что нам стоит учесть?"
+              ></textarea>
+            </div>
+          </div>
+          <label class="check"
+            ><input
+              id="consent"
+              name="consent"
+              type="checkbox"
+              required
+              aria-describedby="consent-error"
+            />
+            Согласен на обработку данных *</label
+          >
+          <p class="error" id="consent-error"></p>
+          <button class="button" type="submit">Подготовить заявку ↗</button>
+          <p class="small muted">
+            Демонстрационный магазин: настоящей отправки и оплаты нет.
+          </p>
+          <div id="form-message" role="status" tabindex="-1"></div>
+        </form>
+        <aside class="summary">
+          <h2>Ваш заказ</h2>
+          <div id="order-items"></div>
+          <p class="summary-line">
+            <span>Скидка</span><strong id="order-discount"></strong>
+          </p>
+          <p class="summary-line">
+            <span>Доставка</span><strong id="shipping"></strong>
+          </p>
+          <p class="total" id="order-total"></p>
+          <a href="cart.html">Изменить корзину</a>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">сборка /</a>
+          <p>Хорошая техника для обычной жизни.</p>
+        </div>
+        <div>
+          <a href="catalog.html">Каталог</a><a href="cart.html">Корзина</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </div>
+        <p class="small muted">
+          Учебный проект · КР №4<br />Фотографии — Unsplash<br />Заказы и оплата
+          не принимаются.
+        </p>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog id="quick-view" aria-labelledby="quick-title">
+      <button
+        class="close-dialog secondary"
+        type="button"
+        aria-label="Закрыть просмотр"
+      >
+        ×
+      </button>
+      <div id="quick-content"></div>
+    </dialog>
+  </body>
+</html>

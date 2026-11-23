@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Сборка — техника для учёбы, работы и отдыха. Каталог."
+    />
+    <title>Каталог — Сборка</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <div class="topbar">
+      <div class="container">
+        <span>Техника, с которой всё складывается.</span
+        ><span>−10% на первый набор · START10</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">с.</span>сборка<span class="brand-dot"
+            >/</span
+          ></a
+        ><button
+          class="menu-toggle secondary"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          hidden
+        >
+          Меню
+        </button>
+        <nav id="site-menu" aria-label="Основная навигация">
+          <a href="index.html">Главная</a
+          ><a href="catalog.html" aria-current="page">Каталог</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </nav>
+        <a class="cart-link" href="cart.html"
+          >Корзина <span class="cart-count">0</span></a
+        >
+      </div>
+    </header>
+    <main class="container" id="main-content" tabindex="-1">
+      <p class="breadcrumbs">
+        <a href="index.html">Главная</a><span>/</span>Каталог
+      </p>
+      <noscript
+        ><p class="notice">
+          Для каталога и корзины включите JavaScript в браузере.
+        </p></noscript
+      >
+      <div class="page-heading">
+        <p class="eyebrow">НАЙДИ СВОЮ ТЕХНИКУ</p>
+        <h1>Каталог</h1>
+        <p>От одного полезного аксессуара до нового рабочего места.</p>
+      </div>
+      <div class="catalog-layout">
+        <aside class="filters">
+          <h2>Подобрать товары</h2>
+          <label for="search">Что ищем?</label
+          ><input
+            id="search"
+            type="search"
+            placeholder="Например, клавиатура"
+          /><label for="category">Категория</label
+          ><select id="category">
+            <option value="">Все категории</option>
+            <option value="laptops">Ноутбуки</option>
+            <option value="computers">Компьютеры</option>
+            <option value="keyboards">Клавиатуры</option>
+            <option value="mice">Мыши</option>
+            <option value="audio">Аудио</option>
+            <option value="monitors">Мониторы</option></select
+          ><label for="max-price">Бюджет до, ₽</label
+          ><input
+            id="max-price"
+            type="number"
+            min="0"
+            placeholder="Без ограничений"
+          /><label class="check"
+            ><input type="checkbox" id="available" /> Только в наличии</label
+          ><label class="check"
+            ><input type="checkbox" id="favorites-only" /> Избранное</label
+          ><button type="button" class="button secondary" id="reset-filters">
+            Сбросить фильтры
+          </button>
+        </aside>
+        <section aria-label="Товары">
+          <div class="catalog-toolbar">
+            <p id="results-count" role="status"></p>
+            <div>
+              <label for="sort" class="sr-only">Сортировка</label
+              ><select id="sort">
+                <option value="default">Сначала рекомендуемые</option>
+                <option value="cheap">Сначала дешевле</option>
+                <option value="expensive">Сначала дороже</option>
+                <option value="name">По названию: А–Я</option>
+              </select>
+            </div>
+          </div>
+          <div class="products-grid" id="catalog-products"></div>
+          <div class="empty" id="empty-results" hidden>
+            <span aria-hidden="true">⌕</span>
+            <h2>Пока ничего не нашлось</h2>
+            <p>Попробуйте другое название или уберите часть фильтров.</p>
+            <button type="button" class="button" data-reset>
+              Показать все товары
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">сборка /</a>
+          <p>Хорошая техника для обычной жизни.</p>
+        </div>
+        <div>
+          <a href="catalog.html">Каталог</a><a href="cart.html">Корзина</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </div>
+        <p class="small muted">
+          Учебный проект · КР №4<br />Фотографии — Unsplash<br />Заказы и оплата
+          не принимаются.
+        </p>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog id="quick-view" aria-labelledby="quick-title">
+      <button
+        class="close-dialog secondary"
+        type="button"
+        aria-label="Закрыть просмотр"
+      >
+        ×
+      </button>
+      <div id="quick-content"></div>
+    </dialog>
+  </body>
+</html>

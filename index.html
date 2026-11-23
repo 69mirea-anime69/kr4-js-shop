@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Сборка — техника для учёбы, работы и отдыха. Техника для твоих задач."
+    />
+    <title>Техника для твоих задач — Сборка</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <div class="topbar">
+      <div class="container">
+        <span>Техника, с которой всё складывается.</span
+        ><span>−10% на первый набор · START10</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">с.</span>сборка<span class="brand-dot"
+            >/</span
+          ></a
+        ><button
+          class="menu-toggle secondary"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          hidden
+        >
+          Меню
+        </button>
+        <nav id="site-menu" aria-label="Основная навигация">
+          <a href="index.html" aria-current="page">Главная</a
+          ><a href="catalog.html">Каталог</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </nav>
+        <a class="cart-link" href="cart.html"
+          >Корзина <span class="cart-count">0</span></a
+        >
+      </div>
+    </header>
+    <main class="container" id="main-content" tabindex="-1">
+      <noscript
+        ><p class="notice">
+          Для каталога и корзины включите JavaScript в браузере.
+        </p></noscript
+      >
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">СОБЕРИ СВОЁ РАБОЧЕЕ МЕСТО</p>
+          <h1>
+            Хорошая техника.<br />
+            Твой ритм.
+          </h1>
+          <p>
+            Для первой пары, последнего дедлайна<br />
+            и вечера, который наконец-то твой.
+          </p>
+          <a class="button" href="catalog.html"
+            >Выбрать технику <span aria-hidden="true">↗</span></a
+          >
+          <div class="hero-tags">
+            <span>Ноутбуки</span><span>Периферия</span><span>Аудио</span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img
+            src="images/product-6.jpg"
+            alt="Компьютерная сборка с подсветкой"
+            width="1000"
+            height="900"
+          />
+          <div class="photo-caption">
+            <span>РАБОТАЙ. ИГРАЙ. СОЗДАВАЙ.</span
+            ><strong>Место, где всё сходится.</strong>
+          </div>
+        </div>
+      </section>
+      <section class="category-strip" aria-label="Категории">
+        <a href="catalog.html?category=laptops"
+          >01 <strong>Ноутбуки</strong> ↗</a
+        ><a href="catalog.html?category=keyboards"
+          >02 <strong>Клавиатуры</strong> ↗</a
+        ><a href="catalog.html?category=audio">03 <strong>Звук</strong> ↗</a
+        ><a href="catalog.html">04 <strong>Весь каталог</strong> ↗</a>
+      </section>
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">НАЧНИ С ГЛАВНОГО</p>
+            <h2>На каждый день</h2>
+          </div>
+          <a href="catalog.html">Все товары ↗</a>
+        </div>
+        <div class="products-grid" id="featured"></div>
+      </section>
+      <section class="offer">
+        <div>
+          <p class="eyebrow">ПЕРВАЯ СБОРКА?</p>
+          <h2>Начать чуть приятнее.</h2>
+          <p>Промокод START10 даёт скидку 10% на товары в корзине.</p>
+        </div>
+        <a class="button light" href="catalog.html">Собрать свой набор ↗</a>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">сборка /</a>
+          <p>Хорошая техника для обычной жизни.</p>
+        </div>
+        <div>
+          <a href="catalog.html">Каталог</a><a href="cart.html">Корзина</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </div>
+        <p class="small muted">
+          Учебный проект · КР №4<br />
+          Фотографии — Unsplash<br />
+          Заказы и оплата не принимаются.
+        </p>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog id="quick-view" aria-labelledby="quick-title">
+      <button
+        class="close-dialog secondary"
+        type="button"
+        aria-label="Закрыть просмотр"
+      >
+        ×
+      </button>
+      <div id="quick-content"></div>
+    </dialog>
+  </body>
+</html>

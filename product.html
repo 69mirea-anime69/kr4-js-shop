@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Сборка — техника для учёбы, работы и отдыха. Товар."
+    />
+    <title>Товар — Сборка</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <div class="topbar">
+      <div class="container">
+        <span>Техника, с которой всё складывается.</span
+        ><span>−10% на первый набор · START10</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">с.</span>сборка<span class="brand-dot"
+            >/</span
+          ></a
+        ><button
+          class="menu-toggle secondary"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          hidden
+        >
+          Меню
+        </button>
+        <nav id="site-menu" aria-label="Основная навигация">
+          <a href="index.html">Главная</a><a href="catalog.html">Каталог</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </nav>
+        <a class="cart-link" href="cart.html"
+          >Корзина <span class="cart-count">0</span></a
+        >
+      </div>
+    </header>
+    <main class="container" id="main-content" tabindex="-1">
+      <p class="breadcrumbs">
+        <a href="index.html">Главная</a><span>/</span>Товар
+      </p>
+      <noscript
+        ><p class="notice">
+          Для каталога и корзины включите JavaScript в браузере.
+        </p></noscript
+      >
+      <div id="product-detail"></div>
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">сборка /</a>
+          <p>Хорошая техника для обычной жизни.</p>
+        </div>
+        <div>
+          <a href="catalog.html">Каталог</a><a href="cart.html">Корзина</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </div>
+        <p class="small muted">
+          Учебный проект · КР №4<br />Фотографии — Unsplash<br />Заказы и оплата
+          не принимаются.
+        </p>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog id="quick-view" aria-labelledby="quick-title">
+      <button
+        class="close-dialog secondary"
+        type="button"
+        aria-label="Закрыть просмотр"
+      >
+        ×
+      </button>
+      <div id="quick-content"></div>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Сборка — техника для учёбы, работы и отдыха. Доставка и вопросы."
+    />
+    <title>Доставка и вопросы — Сборка</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <div class="topbar">
+      <div class="container">
+        <span>Техника, с которой всё складывается.</span
+        ><span>−10% на первый набор · START10</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">с.</span>сборка<span class="brand-dot"
+            >/</span
+          ></a
+        ><button
+          class="menu-toggle secondary"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          hidden
+        >
+          Меню
+        </button>
+        <nav id="site-menu" aria-label="Основная навигация">
+          <a href="index.html">Главная</a><a href="catalog.html">Каталог</a
+          ><a href="contacts.html" aria-current="page">Доставка и вопросы</a>
+        </nav>
+        <a class="cart-link" href="cart.html"
+          >Корзина <span class="cart-count">0</span></a
+        >
+      </div>
+    </header>
+    <main class="container" id="main-content" tabindex="-1">
+      <p class="breadcrumbs">
+        <a href="index.html">Главная</a><span>/</span>Доставка и вопросы
+      </p>
+      <noscript
+        ><p class="notice">
+          Для каталога и корзины включите JavaScript в браузере.
+        </p></noscript
+      >
+      <div class="page-heading">
+        <p class="eyebrow">РАЗБЕРЁМСЯ В ДЕТАЛЯХ</p>
+        <h1>Доставка и вопросы</h1>
+        <p>Самое важное перед тем, как собрать свой заказ.</p>
+      </div>
+      <div class="info-grid">
+        <section class="form-panel">
+          <h2>Как получить заказ</h2>
+          <p>
+            Самовывоз — бесплатно. Доставка — 490 ₽, а от 10 000 ₽ после скидки
+            — бесплатно.
+          </p>
+          <p>
+            Способ получения и стоимость отображаются в заявке до её подготовки.
+          </p>
+          <a class="button secondary" href="catalog.html"
+            >Вернуться к выбору ↗</a
+          >
+        </section>
+        <section class="faq">
+          <details open>
+            <summary>Как работает промокод?</summary>
+            <p>
+              Введите START10 в корзине и нажмите «Применить». Скидка 10%
+              применяется к товарам, доставка считается отдельно.
+            </p>
+          </details>
+          <details>
+            <summary>Где найти избранное?</summary>
+            <p>
+              Нажмите сердечко у товара, затем включите фильтр «Избранное» в
+              каталоге. Выбор сохранится в этом браузере.
+            </p>
+          </details>
+          <details>
+            <summary>Можно ли сделать настоящий заказ?</summary>
+            <p>
+              Пока нет: это демонстрация магазина. Заявка проверяется и
+              подготавливается на странице, данные никуда не отправляются.
+            </p>
+          </details>
+          <details>
+            <summary>Почему фотографии могут отличаться от описания?</summary>
+            <p>
+              В каталоге используются фотографии техники с Unsplash. Названия,
+              характеристики и цены приведены для учебного примера, это не
+              предложения конкретных производителей.
+            </p>
+          </details>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">сборка /</a>
+          <p>Хорошая техника для обычной жизни.</p>
+        </div>
+        <div>
+          <a href="catalog.html">Каталог</a><a href="cart.html">Корзина</a
+          ><a href="contacts.html">Доставка и вопросы</a>
+        </div>
+        <p class="small muted">
+          Учебный проект · КР №4<br />Фотографии — Unsplash<br />Заказы и оплата
+          не принимаются.
+        </p>
+      </div>
+    </footer>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog id="quick-view" aria-labelledby="quick-title">
+      <button
+        class="close-dialog secondary"
+        type="button"
+        aria-label="Закрыть просмотр"
+      >
+        ×
+      </button>
+      <div id="quick-content"></div>
+    </dialog>
+  </body>
+</html>
