@@ -48,7 +48,7 @@ if (detail) {
   const product = products.find((p) => p.id === Number(value || 1));
   if (product) {
     detail.append(detailContent(product));
-    document.title = product.title + " — Сборка";
+    document.title = product.title + " — techshop";
   } else
     detail.append(
       emptyBlock(
